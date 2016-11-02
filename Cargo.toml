@@ -1,0 +1,8 @@
+[package]
+name = "go_bot"
+version = "0.1.0"
+authors = ["Visic <a.frailing@gmail.com>"]
+
+[dependencies]
+enum_primitive = "*"
+num = "*"
