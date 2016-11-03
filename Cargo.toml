@@ -6,3 +6,4 @@ authors = ["Visic <a.frailing@gmail.com>"]
 [dependencies]
 enum_primitive = "*"
 num = "*"
+rand = "*"
