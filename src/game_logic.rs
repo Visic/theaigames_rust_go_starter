@@ -28,14 +28,14 @@ impl GameLogic {
         let xpos = self.rng.gen::<u32>() % self.settings.field_width;
         let ypos = self.rng.gen::<u32>() % self.settings.field_height;
         
-        if self.validate_move(xpos, ypos) {
+        if self.is_move_valid(xpos, ypos) {
             println!("place_move {} {}", xpos, ypos);
         } else {
             println!("pass");
         }
     }
 
-    fn validate_move(&self, xpos: u32, ypos: u32) -> bool {
+    fn is_move_valid(&self, xpos: u32, ypos: u32) -> bool {
         //Note:: This will also handle the KO rule
         let is_empty = self.get_point(xpos, ypos) == Point::Empty;
         if !is_empty { return false; }
