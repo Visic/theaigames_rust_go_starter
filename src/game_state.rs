@@ -1,6 +1,7 @@
 use num::FromPrimitive;
 
 enum_from_primitive! {
+    #[derive(Copy, Clone, PartialEq)]
     pub enum Point {
         Illegal = -1,
         Empty,
