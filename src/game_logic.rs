@@ -40,7 +40,7 @@ impl GameLogic {
         let is_empty = self.get_point(xpos, ypos) == Point::Empty;
         if !is_empty { return false; }
         
-        //one side must be empty (e.g. a new peice at this position must have at least one liberty)
+        //one side must be empty (e.g. a new piece at this position must have at least one liberty)
         let is_suicide = (xpos == 0                              || self.get_point(xpos - 1, ypos)     != Point::Empty) &&
                          (xpos + 1 >= self.settings.field_width  || self.get_point(xpos + 1, ypos)     != Point::Empty) &&
                          (ypos == 0                              || self.get_point(xpos,     ypos - 1) != Point::Empty) &&
